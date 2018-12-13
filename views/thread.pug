@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  div.center.post
+    h1 Thread
+    h1 #{post.title}
+    p #{post.content}
+    p #{post.url}
+    
+  div
+    h2 Replies
+    each reply in post.replies
+      div.post
+        h4 #{reply.content}
+      
+      
+      //-  THIS SHOULD BE HANDLED BETTER
+  div
+    form(action="/api/threadReply", method="post", enctype="application/x-www-form-urlencoded")
+      div
+        label(for="title") Title 
+        input(type="text", id="title", name="title", requried)
+      div
+        label(for="url") Url
+        input(type="text", id="url", name="url", required)
+      div
+        label(for="board") Board 
+        input(type="text", id="board", name="board", required)
+      div
+        label(for="content") Content
+        textarea(name="content", required)
+      button(type="submit") Create

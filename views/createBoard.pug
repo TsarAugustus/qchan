@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  div.center
+    h1 Make a Board
+    form(action="/api/createBoard", method="post", enctype="application/x-www-form-urlencoded")
+      div
+        label(for="boardName") Board Name
+        input(type="text", id="boardName", name="boardName", required)
+      div
+        label(for="boardUrl") Board URL
+        input(type="text", id="boardUrl", name="boardUrl", required)
+      div
+        label(for="boardDesc") Board Description
+        textarea(name="boardDesc", required)
+      button(type="submit") Create Board

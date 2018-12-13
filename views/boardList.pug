@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  div.boardWrap
+    each board in boards
+      a(href='/board/'+ board.boardUrl)
+        div.boards
+          h3 #{board.boardName}
+          p #{board.boardUrl}
+          p #{board.boardDesc}

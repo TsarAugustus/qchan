@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Welcome to #{board.boardName}
+  p #{board.boardDesc}
+  each post in posts
+    div.list.post.center
+      a(href="/board/" + post.board + "/" + post.url)
+        p #{post.url}
+        h3 #{post.title}
+        p #{post.content}
+        form(method="post", action="/api/deletePost/" + post.id)
+          button(type="submit") Delete

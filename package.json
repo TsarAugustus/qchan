@@ -1,0 +1,22 @@
+{
+  "name": "qchan",
+  "version": "0.0.1",
+  "description": "Quality Chan",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "watch": "nodemon -e sass -x \"npm run build\"",
+    "build": "node-sass --include-path sass/style.sass sass/style.sass public/stylesheets/style.css"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.3.15",
+    "node-sass": "^4.10.0",
+    "path": "^0.12.7",
+    "pug": "^2.0.3",
+    "uuid": "^3.3.2"
+  }
+}
