@@ -11,3 +11,4 @@ TODO:
 * 1st code Refactor (views included)
 * Add further security (post hash, remove image data etc)
 * Create ezdeploy for qchan
+* Fix error crashes

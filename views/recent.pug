@@ -1,9 +1,9 @@
 extends layout
 
 block content
-  h1 Lists
+  h1 Most recent Posts
   each post in posts
-    div.post.center.list
+    div.post.center
       h3 #{post.title}
       h3 #{post.url}
       p #{post.content}

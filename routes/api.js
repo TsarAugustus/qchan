@@ -11,6 +11,7 @@ const Board = require('../models/Board');
 
 //ADD SAVING
 
+
 router.post('/threadReply', function(req, res, done) {
   // console.log(req.body);
   let reply = req.body.content;
@@ -30,7 +31,7 @@ router.post('/threadReply', function(req, res, done) {
 
     });
   });
-  return res.redirect('/list')
+  return res.redirect('/recent')
 });
 
 router.post('/post', function(req, res, next) {
@@ -74,7 +75,7 @@ router.post('/deletePost/:postID', function(req, res) {
     // Post.deleteOne({_id: req.params.postID}, function(err, post) { if (err) throw err });
   });
 
-  return res.redirect('/list');
+  return res.redirect('/recent');
 });
 
 router.post('/createBoard', function(req, res) {

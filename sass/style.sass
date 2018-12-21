@@ -1,5 +1,5 @@
 *
-  background-color: gray
+  background-color: #112d4e
 
 nav
   width: 100%
@@ -8,15 +8,33 @@ nav
     li
       display: inline-block
       padding: 1em
-
+      a
+        color: #dbe2ef
+        text-decoration: none
+      a:hover
+        color: #3f72af
 .center
   text-align: center
 
 .post
+  h3, p, form
+    background-color: #3f72af
+  background-color: #3f72af
   border: 1px solid black
   margin-top: 0.2em
   margin-left: 0.2em
   margin-right: 0.2em
+  width: 30%
+  float: left
+  button
+    color: #eee
+    text-transform: uppercase
+    border-radius: 0.5em
+    background-color: #cc0000
+    height: 1.75em
+    padding: 0em 1em 0em 1em
+    border: none
+    margin-bottom: 1em
 
 // GET /POST
 
@@ -42,19 +60,6 @@ nav
     border-radius: 0.5em
     background-color: #1aff1a
     height: 2em
-    padding: 0em 1em 0em 1em
-    border: none
-    margin-bottom: 1em
-
-.list
-  width: 30%
-  float: left
-  button
-    color: #eee
-    text-transform: uppercase
-    border-radius: 0.5em
-    background-color: #cc0000
-    height: 1.75em
     padding: 0em 1em 0em 1em
     border: none
     margin-bottom: 1em
